@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>반응형코딩-레이아웃</title>
+  <link rel="stylesheet" href="css/LuminousLegacy.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const mMenu = document.querySelector('.m_menu');
+    const mMenu2 = document.querySelector('.m_menu_2');
+    const menuClose = document.querySelector('.menu_close');
+    const back = document.querySelector('.back');
+    // .m_menu를 클릭했을 때
+    mMenu.addEventListener('click', function() {
+      
+        // .m_menu_2를 토글하여 표시/숨김
+        if (
+          getComputedStyle(mMenu2).display === 'none') 
+          {mMenu2.style.display = 'flex';
+        } else {
+            mMenu2.style.display = 'none';
+        }
+    });
+
+    // .menu_close를 클릭했을 때
+    menuClose.addEventListener('click', function() {
+        // .m_menu_2를 숨김
+        mMenu2.style.display = 'none';
+    });
+
+
+    mMenu.addEventListener('click', function() {
+      
+      // .m_menu_2를 토글하여 표시/숨김
+      if (
+        getComputedStyle(back).display === 'none') 
+        {back.style.display = 'block';
+      } else {
+          back.style.display = 'none';
+      }
+  });
+
+  // .menu_close를 클릭했을 때
+  menuClose.addEventListener('click', function() {
+      // .m_menu_2를 숨김
+      back.style.display = 'none';
+  });
+    
+});
+</script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header_wrap">
+      <a href="">
+        <figure><img src="img/logoLL.png" alt="" /></figure>
+      </a>
+      <ul class="main_menu">
+        <li><a href="">Best</a></li>
+        <li><a href="">Living room light</a></li>
+        <li><a href="">Bathroom light</a></li>
+        <li><a href="">Floor lamp</a></li>
+        <li><a href="">Etc</a></li>
+      </ul>
+      <ul class="main_menu">
+        <li><a href="">Login</a></li>
+        <li><a href="">Search</a></li>
+      </ul>
+
+      <div class="m_menu">
+      <p>Menu</p>
+    </div> <!-- m_menu end -->
+
+      <ul class="m_menu_2">
+        <li class="menu_close"><a href=""><p>close</p></a></li>
+        <ul class="m_menu_3">
+          <li><a href="">Login</a></li>
+          <li><a href="">Search</a></li>
+        </ul>
+        <li><a href="">Best</a></li>
+        <li><a href="">Living room light</a></li>
+        <li><a href="">Bathroom light</a></li>
+        <li><a href="">Floor lamp</a></li>
+        <li><a href="">Etc</a></li>
+      </ul>
+      <div class="back"></div>
+    
+    </div><!-- header_wrap end -->
+  </header><!-- header end -->
+
+  <main class="main">
+    <div class="main_wrap">
+
+      <section class="main01" id="main01">
+        <div class="inner">
+          <h1>Best item</h1>
+          <p>Discover our best products</p>
+          <div class="item">
+            <div class="box bigbox">
+              <figure><img src="img/미드저니best1.png" alt="" /></figure>
+              <div class="title">
+                <h2>Floor lamp</h2>
+                <p>Explore our wide selection</p>
+              </div>
+            
+            </div>
+            <!-- bigbox end -->
+
+            <div class="box middlebox">
+              <div class="box smallbox">
+                <a href="">
+                  <figure><img src="img/미드저니best3.png" alt="" /></figure>
+                  <div class="title">
+                    <h2>Ceiling light</h2>
+                    <p>Explore our wide selection</p>
+                  </div>
+                </a>
+              </div>
+              <!-- smallbox end -->
+
+              <div class="box smallbox">
+                <a href="">
+                  <figure><img src="img/미드저니스탠드등.png" alt="" /></figure>
+                  <div class="title">
+                    <h2>Table lamp</h2>
+                    <p>Explore our wide selection</p>
+                  </div>
+                </a>
+              </div>
+              <!-- smallbox end -->
+            </div>
+            <!-- middlebox end -->
+          </div>
+          <!-- item end -->
+        </div>
+        <!-- inner end -->
+      </section><!-- #main01 end -->
+
+      <section class="main02" id="main02">
+        <div class="inner">
+          
+          <div class="box2 titlebox2">
+            <a href="">
+              <figure><img src="img/미드저니고급조명.png" alt="" /></figure>
+            </a>
+              <div>
+                <h2>Pendant Light</h2>
+                <p>gorgeous golden lamp</p>
+              </div>
+            </div><!-- titlebox2 end -->
+
+          <div class="box2 smallbox2">
+            <a href="">
+              <figure><img src="img/미드저니고급조명8.png" alt="" /></figure>
+              </a>
+              <div>
+                <h2>Pendant Light</h2>
+                <p>gorgeous golden lamp</p>
+              </div>            
+          </div><!-- smallbox2 end -->
+
+          <div class="box2 smallbox2">
+            <a href="">
+              <figure><img src="img/미드저니고급조명6.png" alt="" /></figure>
+            </a>
+              <div>
+                <h2>Pendant Light</h2>
+                <p>gorgeous golden lamp</p>
+              </div>
+          </div><!-- smallbox2 end -->
+
+          <div class="box2 middlebox2">
+            <a href="">
+              <figure><img src="img/미드저니고급조명7.png" alt="" /></figure>
+            </a>
+              <div>
+                <h2>Pendant Light</h2>
+                <p>gorgeous golden lamp</p>
+              </div>
+          </div><!-- middlebox2 end -->
+
+          <div class="box2 middlebox2">
+            <a href="">
+              <figure><img src="img/미드저니고급조명5.png" alt="" /></figure>
+            </a>
+              <div>
+                <h2>Pendant Light</h2>
+                <p>gorgeous golden lamp</p>
+              </div>
+            </div><!-- middlebox2 end -->
+        </div><!-- inner end -->
+      </section><!-- #main02 end -->
+
+      <section class="main03" id="main03">
+        <div class="inner">
+          <h1>Hit promotion</h1>
+          <p>Exclusive deals just for you!</p>
+
+          <div class="box3">
+
+            <div class="smallbox3">
+              <a href="">
+                <figure><img src="img/미드저니달무드등.png" alt="" /></figure>
+                <span>Mood lamp</span>
+                <p>Moon mood lamp</p>
+                <ul>
+                  <li><strong>39,000￦</strong></li>
+                  <li>15%</li>
+                </ul>
+              </a>
+            </div><!-- smallbox3 end -->
+
+            <div class="smallbox3">
+              <a href="">
+                <figure><img src="img/미드저니고래등.png" alt="" /></figure>
+                <span>Model lamp</span>
+                <p>Whale-shaped model lamp</p>
+                <ul>
+                  <li><strong>66,000￦</strong></li>
+                  <li>35%</li>
+                </ul>
+              </a>
+            </div><!-- smallbox3 end -->
+
+            <div class="smallbox3">
+              <a href="">
+                <figure><img src="img/미드저니가스등.png" alt="" /></figure>
+                <span>Vintage model lamp</span>
+                <p>Melissa Hansen-Padberg</p>
+                <ul>
+                  <li><strong>69,000￦</strong></li>
+                  <li>25%</li>
+                </ul>
+              </a>
+            </div><!-- smallbox3 end -->
+
+            <div class="smallbox3">
+              <a href="">
+                <figure><img src="img/미드저니책등2.png" alt="" /></figure>
+                <span>Mood lamp</span>
+                <p>BooK mood lamp</p>
+                <ul>
+                  <li><strong>19,000￦</strong></li>
+                  <li>45%</li>
+                </ul>
+              </a>
+            </div><!-- smallbox3 end -->
+          </div><!-- box3 end -->
+
+        </div><!-- inner end -->
+      </section><!-- #main03 end -->
+
+      <section class="main04" id="main04">
+        <div class="inner">
+          <div class="circle">
+            <a href="">
+              <figure><img src="img/미드저니우주달등.png" alt="" /></figure>
+            </a>
+            <p>Mood lamp</p>
+          </div>
+          <!-- circle end -->
+
+          <div class="circle">
+            <a href="">
+              <figure><img src="img/미드저니모형등.png" alt="" /></figure>
+            </a>
+            <p>Model lamp</p>
+          </div>
+          <!-- circle end -->
+
+          <div class="circle">
+            <a href="">
+              <figure><img src="img/미드저니깃털등.png" alt="" /></figure>
+            </a>
+            <p>Feather lamp</p>
+          </div>
+          <!-- circle end -->
+
+          <div class="circle">
+            <a href="">
+              <figure><img src="img/미드저니스탠드등2.png" alt="" /></figure>
+            </a>
+            <p>Floor lamp</p>
+          </div>
+          <!-- circle end -->
+
+          <div class="circle">
+            <a href="">
+              <figure><img src="img/미드저니천장등3.png" alt="" /></figure>
+            </a>
+            <p>Simple ceiling light</p>
+          </div>
+          <!-- circle end -->
+        </div>
+        <!-- inner end -->
+      </section><!-- #main04 end -->
+
+    </div><!-- .main_wrap -->
+  </main><!-- .main end -->
+
+  <footer class="footer">
+    <div class="inner">
+      <ul class="ul01">
+        <li><a href="">이용약관</a></li>
+        <li><a href="">개인정보처리방침</a></li>
+        <li><a href="">저작권안내</a></li>
+      </ul>
+      <strong>(주)LuminousLegacy</strong>
+      <ul class="f_ul ul02">
+        <li>Call 1234-5678</li>
+        <li>E-mail : Luminous_Legacy@gmail.com</li>
+      </ul>
+      <ul class="f_ul ul03">
+        <li>부산시 남구 수영로 지하 1층</li>
+        <li>사업자등록번호 377-01-000000</li>
+      </ul>
+      <p>Copyright ⓒ Luminous Legacy, ALL RIGHT RESERVED</p>
+    </div>
+    <!-- inner end -->
+  </footer>
+  <!-- footer end -->
+</body>
+
+</html>
