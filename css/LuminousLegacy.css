@@ -27,6 +27,7 @@ body {
   line-height: 1;
   font-family: "Lora", serif;
 }
+
 li {
   list-style: none;
 }
@@ -314,6 +315,7 @@ a {
   width: 31.59% /* (455 / 1440 *100) */;
   position: relative;
   /* margin-top: 30px; */
+  cursor: pointer;
 }
 .main02 .inner .box2 a figure {
   max-height: 455px;
