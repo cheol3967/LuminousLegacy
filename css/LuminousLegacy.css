@@ -54,7 +54,9 @@ a {
   align-items: center;
   height: 100%;
 }
-
+.main_menu li:hover a {
+  text-decoration: underline;
+}
 .header .header_wrap a figure {
   height: 50px;
   width: 50px;
